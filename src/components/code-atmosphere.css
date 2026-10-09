@@ -1,0 +1,107 @@
+.code-atmosphere {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+  color: #8fb8aa;
+  opacity: 0.14;
+}
+
+.code-fragment {
+  position: absolute;
+  margin: 0;
+  font-family: "Courier New", monospace;
+  font-size: clamp(10px, 0.9vw, 13px);
+  line-height: 1.9;
+  font-weight: 400;
+  white-space: pre;
+}
+
+.code-line {
+  display: block;
+  width: fit-content;
+  max-width: 90vw;
+  overflow: hidden;
+  white-space: pre;
+  animation: code-typing 9s ease-in-out infinite;
+  animation-delay: calc(var(--line-index) * 0.35s);
+}
+
+.code-one {
+  top: 15%;
+  left: 3%;
+}
+
+.code-two {
+  top: 28%;
+  right: 3%;
+}
+
+.code-three {
+  top: 55%;
+  left: 5%;
+}
+
+.code-four {
+  right: 4%;
+  bottom: 18%;
+}
+
+.code-five {
+  top: 75%;
+  left: 38%;
+}
+
+.code-two .code-line,
+.code-four .code-line {
+  animation-delay: calc(1.5s + var(--line-index) * 0.35s);
+}
+
+@keyframes code-typing {
+  0%,
+  8% {
+    width: 0;
+    opacity: 0;
+  }
+
+  12% {
+    opacity: 1;
+  }
+
+  48%,
+  78% {
+    width: 100%;
+    opacity: 1;
+  }
+
+  95%,
+  100% {
+    width: 0;
+    opacity: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .code-three,
+  .code-five {
+    display: none;
+  }
+
+  .code-fragment {
+    font-size: 10px;
+  }
+
+  .code-atmosphere {
+    opacity: 0.09;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .code-line {
+    width: fit-content;
+    animation: none;
+    opacity: 1;
+  }
+}

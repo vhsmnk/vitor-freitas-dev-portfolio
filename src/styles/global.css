@@ -274,3 +274,27 @@ h2 span {
   margin-left: 8px;
   color: var(--accent);
 }
+
+
+/* Contato: e-mail simples e links maiores */
+.contact-email {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 400;
+  color: inherit;
+}
+
+.contact-actions .contact-social-link {
+  font-size: 28px;
+}
+
+@media (max-width: 600px) {
+  .contact-actions .contact-social-link {
+    font-size: 24px;
+  }
+}
+
+.site-content {
+  position: relative;
+  z-index: 1;
+}

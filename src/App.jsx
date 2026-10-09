@@ -1,5 +1,5 @@
-
 import { useEffect, useState } from "react";
+import CodeAtmosphere from "./components/CodeAtmosphere.jsx";
 import Navbar from "./components/Navbar.jsx";
 import HeroVisual from "./components/HeroVisual.jsx";
 import ScrollReveal from "./components/ScrollReveal.jsx";
@@ -107,6 +107,8 @@ function ServiceItem({ number, icon, title, children }) {
 function App() {
   return (
     <>
+      <CodeAtmosphere />
+
       <ScrollReveal />
 
       <div className="noise" aria-hidden="true" />
@@ -299,17 +301,12 @@ function App() {
             </p>
 
             <div className="contact-actions">
-              {/* E-MAIL: altere o endereço se necessário */}
-              <a
-                className="button button-primary"
-                href="mailto:vhs.gamesdev@gmail.com?subject=Vamos%20conversar%20sobre%20um%20projeto"
-              >
-                E-mail <span>↗</span>
-              </a>
+              <span className="contact-email">
+                vhs.gamesdev@gmail.com
+              </span>
 
-              {/* WHATSAPP: substitua 55SEUNUMERO pelo número completo */}
               <a
-                className="text-link"
+                className="text-link contact-social-link"
                 href="https://wa.me/5521973560200"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -317,9 +314,8 @@ function App() {
                 WhatsApp <span>↗</span>
               </a>
 
-              {/* INSTAGRAM: substitua SEU_USUARIO pelo seu usuário */}
               <a
-                className="text-link"
+                className="text-link contact-social-link"
                 href="https://www.instagram.com/freitasveetor/"
                 target="_blank"
                 rel="noopener noreferrer"
