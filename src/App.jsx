@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar.jsx";
 import HeroVisual from "./components/HeroVisual.jsx";
 import ScrollReveal from "./components/ScrollReveal.jsx";
 import Projects from "./components/Projects.jsx";
+import SocialMedia from "./socialmedia/SocialMedia.jsx";
 
 const heroTitleLines = [
   "Ideias bem pensadas.",
@@ -103,47 +104,6 @@ function ServiceItem({ number, icon, title, children }) {
   );
 }
 
-function DesignGallery() {
-  return (
-    <div className="design-gallery">
-      <div className="design-tile tile-fashion">
-        <small>ART DIRECTION / 001</small>
-        <strong>
-          FORMA
-          <br />
-          EM MOVIMENTO
-        </strong>
-        <span>ESTUDO DE CAMPANHA</span>
-      </div>
-
-      <div className="design-tile tile-type">
-        <small>TIPOGRAFIA / 002</small>
-        <strong>
-          MENOS
-          <br />
-          RUÍDO.
-          <br />
-          <i>MAIS</i>
-          <br />
-          INTENÇÃO.
-        </strong>
-        <span>ESTUDO GRÁFICO</span>
-      </div>
-
-      <div className="design-tile tile-social">
-        <div className="social-orbit" />
-        <small>SOCIAL DESIGN / 003</small>
-        <strong>
-          IDEIAS QUE
-          <br />
-          CONECTAM.
-        </strong>
-        <span>CONCEITO DE POST</span>
-      </div>
-    </div>
-  );
-}
-
 function App() {
   return (
     <>
@@ -236,10 +196,10 @@ function App() {
           </div>
         </section>
 
-        {/* 04 — DESIGN */}
+        {/* 04 — DESIGN & COMUNICAÇÃO VISUAL */}
         <section className="design-section section-shell" id="design">
           <div className="design-copy">
-            <p className="eyebrow">04 / OUTRO OLHAR, MESMO CUIDADO</p>
+            <p className="eyebrow">04 / DESIGN & COMUNICAÇÃO VISUAL</p>
 
             <h2>
               Desenvolvimento com <span>sensibilidade visual.</span>
@@ -247,21 +207,21 @@ function App() {
 
             <p>
               Além do código, trago experiência com design gráfico e
-              comunicação visual. Um diferencial para pensar interfaces e
-              marcas com atenção à forma e à função.
+              comunicação visual. Explore uma seleção de peças para redes
+              sociais que valorizam composição, identidade e comunicação.
             </p>
 
-            <a className="text-link" href="#contato">
-              Vamos conversar sobre sua marca <span>↗</span>
+            <a
+              className="text-link"
+              href="https://vitorfreitaspresentate.carrd.co/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Conheça meu portfólio <span>↗</span>
             </a>
           </div>
 
-          <DesignGallery />
-
-          <p className="gallery-note">
-            Estudos visuais ilustrativos — substitua por trabalhos autorais
-            reais antes da publicação.
-          </p>
+          <SocialMedia />
         </section>
 
         {/* 05 — PROCESSO */}
@@ -339,18 +299,30 @@ function App() {
             </p>
 
             <div className="contact-actions">
+              {/* E-MAIL: altere o endereço se necessário */}
               <a
                 className="button button-primary"
                 href="mailto:vhs.gamesdev@gmail.com?subject=Vamos%20conversar%20sobre%20um%20projeto"
               >
-                Enviar um e-mail <span>↗</span>
+                E-mail <span>↗</span>
               </a>
 
+              {/* WHATSAPP: substitua 55SEUNUMERO pelo número completo */}
               <a
                 className="text-link"
-                href="https://www.instagram.com/"
+                href="https://wa.me/5521973560200"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
+              >
+                WhatsApp <span>↗</span>
+              </a>
+
+              {/* INSTAGRAM: substitua SEU_USUARIO pelo seu usuário */}
+              <a
+                className="text-link"
+                href="https://www.instagram.com/freitasveetor/"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Instagram <span>↗</span>
               </a>
