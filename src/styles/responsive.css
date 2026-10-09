@@ -1,0 +1,535 @@
+/* 14. Responsividade — tablets
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .section-shell,
+  .site-header {
+    width: min(calc(100% - 42px), var(--max));
+  }
+
+  .hero {
+    grid-template-columns: 1fr 0.75fr;
+    min-height: 620px;
+  }
+
+  .hero-visual {
+    margin-left: -60px;
+    transform: scale(0.82);
+    transform-origin: center right;
+  }
+
+  .hero-meta {
+    gap: 20px;
+  }
+
+  .intro {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding-top: 90px;
+    padding-bottom: 95px;
+  }
+
+  .intro-content {
+    gap: 30px;
+  }
+
+  .project-featured {
+    grid-template-columns: 1fr;
+  }
+
+  .project-featured .project-art {
+    min-height: 320px;
+  }
+
+  .project-featured .project-info {
+    padding: 25px;
+  }
+
+  .design-section {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .design-copy > p:not(.eyebrow) {
+    max-width: 550px;
+  }
+
+  .gallery-note {
+    margin-top: -53px;
+  }
+}
+
+/* 15. Responsividade — celulares
+   ========================================================= */
+
+@media (max-width: 640px) {
+  html {
+    scroll-padding-top: 75px;
+  }
+
+  .section-shell,
+  .site-header {
+    width: calc(100% - 36px);
+  }
+
+  .site-header {
+    height: 76px;
+  }
+
+  .brand-mark {
+    width: 37px;
+    height: 37px;
+  }
+
+  .brand-name {
+    font-size: 9px;
+  }
+
+  .brand-name small {
+    font-size: 7px;
+  }
+
+  /* Menu mobile */
+
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    width: 42px;
+    height: 42px;
+    border: 1px solid var(--line);
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .menu-toggle span {
+    width: 17px;
+    height: 1px;
+    background: var(--text);
+    transition: transform 0.2s;
+  }
+
+  .menu-toggle[aria-expanded="true"] span:first-child {
+    transform: translateY(3.5px) rotate(45deg);
+  }
+
+  .menu-toggle[aria-expanded="true"] span:last-child {
+    transform: translateY(-3.5px) rotate(-45deg);
+  }
+
+  .nav {
+    position: absolute;
+    top: 75px;
+    right: -18px;
+    left: -18px;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 20px 18px 24px;
+    border-bottom: 1px solid var(--line);
+    background: #101115;
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .nav a {
+    padding: 15px 4px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .nav .nav-contact {
+    margin-top: 12px;
+    border: 1px solid var(--line);
+    text-align: center;
+  }
+
+  /* Hero mobile */
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    min-height: 0;
+    padding-top: 65px;
+    padding-bottom: 85px;
+  }
+
+  .hero-copy {
+    padding: 0;
+  }
+
+  .eyebrow {
+    margin-bottom: 19px;
+    font-size: 8px;
+  }
+
+  .hero h1 {
+    font-size: clamp(39px, 11vw, 57px);
+  }
+
+  .hero-description {
+    font-size: 12px;
+  }
+
+  .hero-actions {
+    gap: 19px;
+  }
+
+  .button {
+    gap: 16px;
+    min-height: 46px;
+    padding: 0 14px;
+    font-size: 10px;
+  }
+
+  .text-link {
+    font-size: 10px;
+  }
+
+  .hero-meta {
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 40px;
+  }
+
+  .hero-meta div {
+    gap: 6px;
+    font-size: 8px;
+  }
+
+  .hero-visual {
+    width: 100%;
+    height: 300px;
+    margin: 18px 0 0;
+    transform: scale(0.85);
+    transform-origin: center;
+  }
+
+  .visual-core {
+    width: 130px;
+    height: 130px;
+  }
+
+  .visual-core span {
+    font-size: 38px;
+  }
+
+  .orbit-one {
+    width: 310px;
+    height: 190px;
+  }
+
+  .orbit-two {
+    width: 250px;
+    height: 330px;
+  }
+
+  .card-top {
+    top: 24px;
+    right: -2px;
+  }
+
+  .card-bottom {
+    bottom: 25px;
+    left: -4px;
+  }
+
+  .visual-index {
+    right: 4px;
+    bottom: -3px;
+  }
+
+  .scroll-cue {
+    bottom: 22px;
+  }
+
+  /* Introdução mobile */
+
+  .intro {
+    padding-top: 70px;
+    padding-bottom: 80px;
+  }
+
+  .intro-content {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .intro h2,
+  .section-heading h2,
+  .design-copy h2 {
+    font-size: 32px;
+  }
+
+  .intro-content > p,
+  .section-heading > p {
+    font-size: 11px;
+  }
+
+  /* Projetos mobile */
+
+  .projects {
+    padding-bottom: 85px;
+  }
+
+  .section-heading {
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  .section-heading > p {
+    max-width: 420px;
+    margin-top: 18px;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .project-featured {
+    grid-column: auto;
+  }
+
+  .project-art,
+  .project-featured .project-art {
+    min-height: 245px;
+    padding: 17px;
+  }
+
+  .project-featured .project-info,
+  .project-info {
+    padding: 21px;
+  }
+
+  .mock-window {
+    transform: none;
+  }
+
+  .mock-body {
+    min-height: 180px;
+  }
+
+  .mock-dashboard {
+    padding: 10px;
+  }
+
+  .mock-stats {
+    gap: 4px;
+  }
+
+  .mock-stats div {
+    padding: 5px;
+  }
+
+  .mock-stats b {
+    font-size: 10px;
+  }
+
+  .mock-chart {
+    padding: 7px;
+  }
+
+  .chart-bars {
+    height: 43px;
+    gap: 4px;
+  }
+
+  .jaguar-art,
+  .commerce-art {
+    min-height: 245px;
+  }
+
+  .jaguar-panel {
+    transform: none;
+  }
+
+  .jaguar-sidebar {
+    width: 88px;
+  }
+
+  .jaguar-content {
+    padding: 12px 8px;
+  }
+
+  .shop-window {
+    transform: none;
+  }
+
+  .shop-hero {
+    min-height: 130px;
+  }
+
+  .shop-hero strong {
+    font-size: 22px;
+  }
+
+  /* Serviços mobile */
+
+  .services {
+    padding-top: 70px;
+    padding-bottom: 85px;
+  }
+
+  .service-item {
+    grid-template-columns: 24px 39px 1fr 14px;
+    gap: 10px;
+    padding: 23px 0;
+  }
+
+  .service-icon {
+    width: 37px;
+    height: 37px;
+    font-size: 17px;
+  }
+
+  .service-copy h3 {
+    font-size: 13px;
+  }
+
+  .service-copy p {
+    font-size: 10px;
+  }
+
+  .service-arrow {
+    font-size: 14px;
+  }
+
+  /* Galeria mobile */
+
+  .design-section {
+    gap: 30px;
+    padding-top: 75px;
+    padding-bottom: 85px;
+  }
+
+  .design-gallery {
+    gap: 8px;
+  }
+
+  .design-tile {
+    min-height: 165px;
+    padding: 11px;
+  }
+
+  .tile-fashion {
+    min-height: 338px;
+  }
+
+  .tile-fashion::before {
+    top: 55px;
+    width: 145px;
+    height: 245px;
+  }
+
+  .tile-fashion::after {
+    top: 120px;
+    width: 100px;
+    height: 140px;
+  }
+
+  .design-tile strong {
+    font-size: 17px;
+  }
+
+  .tile-type strong {
+    font-size: 26px;
+  }
+
+  .tile-social strong {
+    font-size: 18px;
+  }
+
+  .design-tile small,
+  .design-tile > span {
+    font-size: 6px;
+  }
+
+  .gallery-note {
+    margin-top: -41px;
+    font-size: 8px;
+  }
+
+  /* Processo mobile */
+
+  .process {
+    padding-top: 70px;
+    padding-bottom: 85px;
+  }
+
+  .process-grid {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 30px;
+  }
+
+  .process-grid h3 {
+    margin-top: 18px;
+  }
+
+  .process-grid p {
+    font-size: 10px;
+  }
+
+  /* Contato mobile */
+
+  .contact {
+    padding-bottom: 55px;
+  }
+
+  .contact-panel {
+    padding: 35px 22px;
+  }
+
+  .contact h2 {
+    font-size: 42px;
+  }
+
+  .contact-description {
+    font-size: 11px;
+  }
+
+  .contact-actions {
+    gap: 18px;
+  }
+
+  .contact-signature {
+    margin-top: 42px;
+    font-size: 7px;
+  }
+
+  /* Rodapé mobile */
+
+  .site-footer {
+    flex-wrap: wrap;
+    gap: 15px;
+    min-height: 100px;
+    padding: 22px 0;
+  }
+
+  .site-footer > span {
+    order: 3;
+    width: 100%;
+  }
+
+  .footer-brand .brand-name {
+    font-size: 8px;
+  }
+}
+
+/* 16. Acessibilidade: movimento reduzido
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

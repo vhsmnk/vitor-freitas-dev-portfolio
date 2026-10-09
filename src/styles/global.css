@@ -1,0 +1,276 @@
+/* =========================================================
+   VITOR HUGO FREITAS — PORTFÓLIO REACT
+   Tema: Dark Premium
+   ========================================================= */
+
+/* 1. Variáveis e configurações globais
+   ========================================================= */
+
+:root {
+  --bg: #0a0b0e;
+  --surface: #111318;
+  --surface-2: #171a20;
+  --line: rgba(255, 255, 255, 0.1);
+  --text: #f0f0ec;
+  --muted: #9a9da6;
+  --accent: #c6f277;
+  --font: "Manrope", sans-serif;
+  --mono: "DM Mono", monospace;
+  --max: 1200px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+::selection {
+  color: var(--bg);
+  background: var(--accent);
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+/* 2. Textura de fundo
+   ========================================================= */
+
+.noise {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E");
+}
+
+.section-shell {
+  width: min(var(--max), calc(100% - 64px));
+  margin-inline: auto;
+}
+
+/* 3. Cabeçalho e navegação
+   ========================================================= */
+
+.site-header {
+  position: relative;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: min(var(--max), calc(100% - 64px));
+  height: 94px;
+  margin: auto;
+  border-bottom: 1px solid var(--line);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+
+/* Marca VH: hexágono */
+
+.brand-mark {
+  position: relative;
+  isolation: isolate;
+
+  display: grid;
+  place-items: center;
+
+  width: 42px;
+  height: 42px;
+
+  border: none;
+  border-radius: 0;
+  background: transparent;
+
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+/* Contorno externo */
+.brand-mark::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+
+  background: rgba(198, 242, 119, 0.7);
+
+  clip-path: polygon(
+    25% 0%,
+    75% 0%,
+    100% 50%,
+    75% 100%,
+    25% 100%,
+    0% 50%
+  );
+}
+
+/* Interior escuro, sem quadrado aparente */
+.brand-mark::after {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  z-index: -1;
+
+  background: var(--bg);
+
+  clip-path: polygon(
+    25% 0%,
+    75% 0%,
+    100% 50%,
+    75% 100%,
+    25% 100%,
+    0% 50%
+  );
+}
+
+.brand-mark span {
+  color: var(--accent);
+}
+
+.brand-name {
+  font-size: 11px;
+  line-height: 1.5;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+}
+
+.brand-name small {
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 8px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+  color: #c5c6c9;
+  font-size: 12px;
+}
+
+.nav a {
+  transition: color 0.2s;
+}
+
+.nav a:hover,
+.text-link:hover {
+  color: var(--accent);
+}
+
+.nav-contact {
+  padding: 12px 15px;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  color: var(--text) !important;
+}
+
+.nav-contact span {
+  margin-left: 10px;
+  color: var(--accent);
+}
+
+.menu-toggle {
+  display: none;
+}
+
+/* 4. Elementos compartilhados
+   ========================================================= */
+
+.eyebrow {
+  margin: 0 0 24px;
+  color: var(--muted);
+  font: 10px var(--mono);
+  letter-spacing: 0.13em;
+}
+
+.status-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin-right: 8px;
+  background: var(--accent);
+  border-radius: 50%;
+  box-shadow: 0 0 14px #c6f27766;
+}
+
+h1 span,
+h2 span {
+  color: var(--accent);
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  min-height: 48px;
+  padding: 0 18px;
+  border-radius: 3px;
+  font-size: 11px;
+  font-weight: 800;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button-primary {
+  background: var(--accent);
+  color: #12150d;
+}
+
+.button-primary:hover {
+  background: #d6ff91;
+}
+
+.button span {
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.text-link {
+  color: #dededb;
+  font-size: 11px;
+  transition: color 0.2s;
+}
+
+.text-link span {
+  margin-left: 8px;
+  color: var(--accent);
+}
