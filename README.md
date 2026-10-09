@@ -1,42 +1,56 @@
-# Portfólio React — Vitor Hugo Freitas
+# Vitor Freitas — Portfólio
 
-Landing page responsiva com React + Vite, usando CSS próprio e sem biblioteca visual externa.
+**Desenvolvimento Full Stack · Front-end · UI/UX Design**
 
-## Requisitos
-- Node.js 20.19+ ou 22.12+ recomendado para as versões atuais do Vite.
-- npm.
+Portfólio pessoal desenvolvido para apresentar projetos, habilidades técnicas e soluções digitais que unem desenvolvimento web, design de interfaces e experiência do usuário.
 
-## Executar no Linux Mint / VS Code
+O projeto foi pensado para transmitir uma identidade visual moderna, com uma interface responsiva, elementos gráficos personalizados e uma navegação objetiva.
 
-Abra um terminal na pasta do projeto e rode:
+## ✨ Sobre o projeto
 
-```bash
-npm install
-npm run dev
-```
+O portfólio reúne projetos práticos de desenvolvimento e design, demonstrando minha evolução técnica e minha abordagem na construção de experiências digitais.
 
-O Vite mostrará o endereço local no terminal (normalmente `http://localhost:5173`).
+A interface utiliza uma identidade visual própria, com estética minimalista, contrastes marcantes, detalhes em destaque e elementos visuais animados.
 
-Para testar a versão de produção:
+## 🚀 Tecnologias utilizadas
 
-```bash
-npm run build
-npm run preview
-```
+* **React** — construção de interfaces por componentes.
+* **Vite** — ambiente de desenvolvimento e build.
+* **JavaScript** — lógica e interatividade.
+* **HTML5** — estrutura semântica.
+* **CSS3** — estilização, responsividade e animações.
+* **Git e GitHub** — versionamento e hospedagem do código.
 
-Os arquivos de publicação serão gerados na pasta `dist/`.
+## 🧩 Projetos em destaque
 
-## Antes de publicar
-1. Confirme o endereço `vhs.gamesdev@gmail.com` no botão de contato.
-2. Troque o link genérico do Instagram pelo seu perfil profissional.
-3. Revise os textos para que descrevam com precisão o estado real de cada projeto.
-4. Substitua os estudos gráficos ilustrativos por trabalhos autorais reais, se preferir.
-5. Adicione links para demonstrações reais quando Nexus Dashboard, Jaguar e o e-commerce estiverem prontos.
+### Nexus Dashboard
 
-## Hospedagem gratuita
-- **Vercel:** importe o repositório Git; o preset Vite costuma ser detectado automaticamente.
-- **Netlify:** conecte o repositório; comando de build `npm run build`, diretório de publicação `dist`.
-- **GitHub Pages:** também é possível, mas exige configurar o `base` do Vite de acordo com o nome do repositório.
+Dashboard de visualização de dados desenvolvido para organizar indicadores em uma interface analítica, com integração de dados externos e componentes de visualização.
 
-## Observação importante
-Os previews de Nexus, Jaguar, Maré Studio e a galeria de design são mockups feitos com JSX/CSS para apresentação visual. Não representam, por si só, APIs, autenticação, banco de dados ou checkout funcional.
+### Orbit
+
+Landing page desenvolvida com foco em identidade visual, composição de interface, hierarquia de conteúdo e experiência de navegação.
+
+> Consulte os projetos disponíveis no portfólio para conhecer os detalhes e as tecnologias utilizadas em cada implementação.
+
+## 🎨 Design e experiência do usuário
+
+* Identidade visual personalizada.
+* Interface adaptável a diferentes tamanhos de tela.
+* Componentização para facilitar a manutenção.
+* Hierarquia visual e navegação intuitiva.
+* Elementos gráficos e animações para enriquecer a experiência.
+
+
+
+
+## 👨‍💻 Autor
+
+**Vitor Freitas**
+
+Desenvolvedor com interesse em desenvolvimento web, construção de interfaces, arquitetura de software e criação de experiências digitais.
+
+* GitHub: https://github.com/vhsmnk
+---
+
+*Desenvolvido com React, Vite e dedicação aos detalhes.*
