@@ -135,7 +135,7 @@ export default function Projects() {
   }
 
   return (
-    <section className="projects-section" id="projects">
+    <section className="projects-section" id="projetos">
       <div className="projects-container">
         <div className="projects-heading">
           <span className="eyebrow">PORTFÓLIO</span>
