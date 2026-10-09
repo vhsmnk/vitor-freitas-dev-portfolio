@@ -2,13 +2,14 @@
 import { useState } from "react";
 import orbitPrint from "../images/orbit_print.png";
 import orbitFull from "../images/orbit_full.png";
-
+import designPagePrint from "../images/desingpage_print.png";
+import designPageFull from "../images/desingpage_full.png";
 const projects = [
   {
     id: "orbit",
     number: "01",
     category: "LANDING PAGES",
-    title: "Orbit",
+    title: "Landing Pages",
   },
   {
     id: "nexus",
@@ -30,7 +31,26 @@ const projects = [
   },
 ];
 
-const orbitUrl = "COLE_AQUI_O_LINK_DO_ORBIT";
+const landingPages = [
+  {
+    id: "orbit",
+    title: "Orbit",
+    image: orbitFull,
+    alt: "Visualização completa da landing page Orbit",
+    url: "https://vhsmnk.github.io/orbit/",
+    description:
+      "Uma landing page que combina identidade visual, organização de conteúdo e uma experiência de navegação voltada à apresentação de uma proposta.",
+  },
+  {
+    id: "design-page",
+    title: "Design Page",
+    image: designPageFull,
+    alt: "Visualização completa da landing page Design Page",
+    url: "https://vhsmnk.github.io/landing-design-page/",
+    description:
+      "Um projeto de landing page que apresenta uma experiência visual própria, com estrutura de conteúdo e interface desenvolvidas para a web.",
+  },
+];
 
 export default function Projects() {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -84,19 +104,36 @@ export default function Projects() {
               tabIndex={project.id === "orbit" ? 0 : undefined}
               aria-label={
                 project.id === "orbit"
-                  ? "Explorar projeto Orbit"
+                  ? "Explorar projetos de landing pages"
                   : undefined
               }
             >
               {project.id === "orbit" ? (
                 <>
-                  <div className="projects-card-image-wrapper">
-                    <img
-                      className="projects-card-image"
-                      src={orbitPrint}
-                      alt="Prévia da landing page Orbit"
-                      loading="lazy"
-                    />
+                  <div className="landing-page-preview-stack">
+                    <div className="landing-page-preview-item">
+                      <img
+                        className="landing-page-preview-image"
+                        src={orbitPrint}
+                        alt="Prévia da landing page Orbit"
+                        loading="lazy"
+                      />
+                      <span className="landing-page-preview-label">
+                        Orbit
+                      </span>
+                    </div>
+
+                    <div className="landing-page-preview-item">
+                      <img
+                        className="landing-page-preview-image"
+                        src={designPagePrint}
+                        alt="Prévia da landing page Design Page"
+                        loading="lazy"
+                      />
+                      <span className="landing-page-preview-label">
+                        Design Page
+                      </span>
+                    </div>
                   </div>
 
                   <div className="projects-card-info">
@@ -105,7 +142,8 @@ export default function Projects() {
                     </span>
 
                     <span className="orbit-card-action">
-                      Explorar projeto <span aria-hidden="true">↗</span>
+                      Explorar projetos{" "}
+                      <span aria-hidden="true">↗</span>
                     </span>
                   </div>
                 </>
@@ -143,50 +181,44 @@ export default function Projects() {
             </button>
           </div>
 
-          <div className="project-expanded-layout">
-            <div className="project-expanded-media">
-              <img
-                src={orbitFull}
-                alt="Visualização completa da landing page Orbit"
-              />
-            </div>
-
-            <div className="project-expanded-content">
-              <p className="eyebrow">LANDING PAGES</p>
-
-              <h3>
-                Orbit<span>.</span>
-              </h3>
-
-              <p>
-                Uma landing page é uma página criada com foco em apresentar
-                um produto, serviço ou ideia de forma clara e direcionar
-                o visitante para uma ação, como conhecer uma solução,
-                entrar em contato ou iniciar uma experiência.
-              </p>
-
-              <p>
-                O Orbit é um exemplo prático desse conceito, reunindo
-                identidade visual, organização de conteúdo e uma experiência
-                de navegação pensada para apresentar uma proposta ao público.
-              </p>
-
-              <p>
-                E esta própria página de portfólio também funciona como
-                uma demonstração de landing page: sua estrutura apresenta
-                projetos, comunica competências e direciona o visitante
-                para conhecer o trabalho.
-              </p>
-
-              <a
-                className="button button-primary orbit-test-button"
-                href={orbitUrl}
-                target="_blank"
-                rel="noopener noreferrer"
+          <div className="landing-pages-expanded-grid">
+            {landingPages.map((page, index) => (
+              <article
+                className="landing-page-detail-card"
+                key={page.id}
+                style={{ "--page-index": index }}
               >
-                Testar Orbit <span aria-hidden="true">↗</span>
-              </a>
-            </div>
+                <div className="landing-page-detail-media">
+                  <img
+                    src={page.image}
+                    alt={page.alt}
+                    loading="lazy"
+                  />
+                </div>
+
+                <div className="landing-page-detail-content">
+                  <p className="eyebrow">LANDING PAGE / 0{index + 1}</p>
+
+                  <h3>
+                    {page.title}<span>.</span>
+                  </h3>
+
+                  <p className="landing-page-description">
+                    {page.description}
+                  </p>
+
+                  <a
+                    className="button button-primary orbit-test-button"
+                    href={page.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Testar {page.title}{" "}
+                    <span aria-hidden="true">↗</span>
+                  </a>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       )}
