@@ -54,3 +54,46 @@ html {
   object-fit: contain;
 }
 
+/* Seletor de idioma */
+.language-switcher {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 18px;
+}
+
+.language-switcher button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 8px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: transparent;
+  opacity: 0.55;
+  cursor: pointer;
+  transition: opacity 0.2s ease, border-color 0.2s ease;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.language-switcher button:hover {
+  opacity: 1;
+}
+
+.language-switcher button.active {
+  opacity: 1;
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.language-switcher button:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 3px;
+}
+
+@media (max-width: 640px) {
+  .language-switcher {
+    margin-left: 0;
+    justify-content: center;
+  }
+}

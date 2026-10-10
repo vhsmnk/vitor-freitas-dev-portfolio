@@ -1,0 +1,178 @@
+{
+  "navbar": {
+    "brandSubtitle": "DIGITAL DEVELOPMENT",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "navigationLabel": "Main navigation",
+    "projects": "Projects",
+    "services": "Services",
+    "design": "Design",
+    "contact": "Let's talk"
+  },
+  "hero": {
+    "eyebrow": "WEB DEVELOPMENT · DIGITAL DESIGN",
+    "titleLine1": "Thoughtful ideas.",
+    "titleLine2": "Digital solutions",
+    "titleLine3": "beautifully built.",
+    "description": "I build digital experiences that combine technology, functionality, and visual care — from landing pages to web applications.",
+    "projectsButton": "Explore projects",
+    "contactButton": "Let's talk"
+  },
+  "services": {
+    "eyebrow": "03 / HOW I CAN HELP",
+    "title": "What can we",
+    "titleAccent": "build together?",
+    "description": "Solutions tailored to each project's goals, context, and specific needs.",
+    "items": [
+      {
+        "title": "Websites & landing pages",
+        "description": "Business websites, landing pages, and presentation pages designed to showcase your brand and make it easier for customers to reach you."
+      },
+      {
+        "title": "Web systems & applications",
+        "description": "Administrative interfaces, dashboards, and internal tools to organize workflows and information."
+      },
+      {
+        "title": "Digital design",
+        "description": "Visual identities and social media assets that help brands communicate with greater consistency and personality."
+      }
+    ]
+  },
+  "design": {
+    "eyebrow": "04 / DESIGN & VISUAL COMMUNICATION",
+    "title": "Development with",
+    "titleAccent": "visual sensitivity.",
+    "description": "Beyond coding, I bring experience in graphic design and visual communication. Explore a selection of social media designs focused on composition, identity, and communication.",
+    "button": "Explore my portfolio"
+  },
+  "process": {
+    "eyebrow": "05 / PROCESS",
+    "title": "From the first conversation",
+    "titleAccent": "to delivery.",
+    "description": "A straightforward process, with a clearly defined scope and decisions aligned with what the project actually needs.",
+    "steps": [
+      {
+        "title": "Understand",
+        "description": "We discuss the business, its audience, and the problem that needs to be solved."
+      },
+      {
+        "title": "Plan",
+        "description": "We define the scope, features, timeline, and budget."
+      },
+      {
+        "title": "Build",
+        "description": "I develop the solution with the agreed goals in mind."
+      },
+      {
+        "title": "Deliver",
+        "description": "We organize deployment, handoff, and any future needs."
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "06 / CONTACT",
+    "title": "Have an idea?",
+    "titleAccent": "Let's talk.",
+    "description": "Tell me what you need to build. From there, we can discuss the project and figure out the next steps.",
+    "whatsapp": "WhatsApp",
+    "instagram": "Instagram",
+    "signature": "VITOR HUGO FREITAS / DIGITAL DEVELOPMENT"
+  },
+  "footer": {
+    "brandSubtitle": "DIGITAL DEVELOPMENT",
+    "copyright": "Vitor Hugo Freitas",
+    "backToTop": "Back to top ↑"
+  },
+  "projects": {
+  "eyebrow": "PORTFOLIO",
+  "heading": "Selected projects",
+  "description": "A selection of interfaces, digital experiences, and web systems.",
+  "back": "Back to projects",
+  "openProject": "Open project {{title}}",
+  "projectLabel": "PROJECT",
+  "landingCategory": "LANDING PAGES",
+  "dashboardCategory": "DASHBOARDS",
+  "systemCategory": "WEB SYSTEMS",
+  "ecommerceCategory": "E-COMMERCE",
+  "orbit": {
+    "title": "Landing Pages",
+    "description": "A collection of landing pages focused on visual identity, user experience, and responsive design.",
+    "previewDesign": "Design Page landing page preview",
+    "previewOrbit": "Orbit landing page preview",
+    "previewCount": "02 LANDING PAGES",
+    "items": [
+      {
+        "title": "Orbit",
+        "description": "A landing page with a distinctive visual identity, modern composition, and clear content presentation."
+      },
+      {
+        "title": "Design Page",
+        "description": "A landing page focused on visual presentation, content hierarchy, and navigation experience."
+      }
+    ],
+    "visit": "Visit project",
+    "fullPreview": "Full preview of the {{title}} landing page"
+  },
+  "nexus": {
+    "title": "Nexus Dashboard",
+    "description": "A dashboard built as a practical demonstration of analytical interfaces, data visualization, and API integration.",
+    "imageAlt": "Nexus dashboard preview",
+    "development": "DASHBOARD DEVELOPMENT",
+    "headline": "Turning data into visual insights.",
+    "paragraph1": "This project demonstrates my ability to build dashboards, structure analytical interfaces, and present information in an organized and intuitive way.",
+    "paragraph2": "The example uses a YouTube-focused dashboard, integrating data through the platform's API to demonstrate how information from an external service can be displayed in a custom interface.",
+    "paragraph3": "The focus is on interface development, indicator visualization, and integration between the application and its data source.",
+    "images": [
+      "Overview",
+      "Details"
+    ],
+    "imageAltDetail": "{{title}} of the Nexus dashboard"
+  },
+  "jaguar": {
+    "title": "Jaguar.AI",
+    "description": "An AI-powered workspace designed to centralize conversations, knowledge, and documents in one environment.",
+    "imageAlt": "Jaguar.AI system logo",
+    "eyebrow": "AI-POWERED INTELLIGENT WORKSPACE",
+    "headline": "An intelligence layer for work.",
+    "paragraph1": "JAGUAR.AI is an AI-powered workspace designed to centralize conversations, knowledge, documents, and eventually organizational data in one environment.",
+    "paragraph2": "Jaguar aims to evolve from a conversational assistant into an intelligence layer capable of interacting with an organization's knowledge and systems.",
+    "paragraph3": "The demonstrations below showcase different parts of the project's interface and user experience.",
+    "demo": "Jaguar.AI demo {{number}}",
+    "videoFallback": "Your browser does not support video playback."
+  },
+  "econix": {
+    "title": "Econix",
+    "description": "An e-commerce concept featuring a contemporary visual identity, intuitive shopping experience, and responsive interface.",
+    "status": "IN DEVELOPMENT",
+    "heroEyebrow": "CONSCIOUS DESIGN. MODERN LIVING.",
+    "heroHeadline": "Better choices start here.",
+    "heroDescription": "An online store concept designed to combine simplicity, style, and convenience.",
+    "cta": "EXPLORE COLLECTION ↗",
+    "products": [
+      "Essentials",
+      "Home & lifestyle",
+      "New arrivals"
+    ],
+    "concept": "E-COMMERCE CONCEPT",
+    "headline": "A simpler shopping experience.",
+    "developmentNote": "This project is in development. The preview presents the conceptual visual direction of the experience.",
+    "cardCategory": "E-COMMERCE · UI/UX"
+
+  }
+},
+
+
+"socialMedia": {
+  "eyebrow": "CREATIVE PORTFOLIO",
+  "title": "Design that",
+  "titleAccent": "connects.",
+  "description": "A selection of social media designs focused on composition, visual identity, and each brand's communication.",
+  "previous": "Show previous artwork",
+  "next": "Show next artwork",
+  "selectArtwork": "Select artwork",
+  "imageAlt": "Social media artwork {{number}}",
+  "showArtwork": "Show artwork {{number}}",
+  "fullPortfolio": "View full portfolio"
+}
+
+}

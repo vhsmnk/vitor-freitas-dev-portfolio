@@ -1,0 +1,178 @@
+{
+  "navbar": {
+    "brandSubtitle": "DESENVOLVIMENTO DIGITAL",
+    "openMenu": "Abrir menu",
+    "closeMenu": "Fechar menu",
+    "navigationLabel": "Navegação principal",
+    "projects": "Projetos",
+    "services": "Serviços",
+    "design": "Design",
+    "contact": "Vamos conversar"
+  },
+  "hero": {
+    "eyebrow": "DESENVOLVIMENTO WEB · DESIGN DIGITAL",
+    "titleLine1": "Ideias bem pensadas.",
+    "titleLine2": "Soluções digitais",
+    "titleLine3": "bem construídas.",
+    "description": "Desenvolvo experiências digitais que unem tecnologia, funcionalidade e cuidado visual — de landing pages a sistemas web.",
+    "projectsButton": "Explorar projetos",
+    "contactButton": "Vamos conversar"
+  },
+  "services": {
+    "eyebrow": "03 / COMO POSSO AJUDAR",
+    "title": "O que podemos",
+    "titleAccent": "construir?",
+    "description": "Soluções pensadas de acordo com o objetivo, o contexto e as necessidades de cada projeto.",
+    "items": [
+      {
+        "title": "Sites & landing pages",
+        "description": "Páginas de apresentação, sites institucionais e páginas comerciais para apresentar sua marca e facilitar o contato com seus clientes."
+      },
+      {
+        "title": "Sistemas & aplicações web",
+        "description": "Interfaces administrativas, dashboards e ferramentas internas para organizar fluxos de trabalho e informações."
+      },
+      {
+        "title": "Design digital",
+        "description": "Identidade visual e peças para redes sociais que ajudam marcas a comunicar com mais consistência e personalidade."
+      }
+    ]
+  },
+  "design": {
+    "eyebrow": "04 / DESIGN & COMUNICAÇÃO VISUAL",
+    "title": "Desenvolvimento com",
+    "titleAccent": "sensibilidade visual.",
+    "description": "Além do código, trago experiência com design gráfico e comunicação visual. Explore uma seleção de peças para redes sociais que valorizam composição, identidade e comunicação.",
+    "button": "Conheça meu portfólio"
+  },
+  "process": {
+    "eyebrow": "05 / PROCESSO",
+    "title": "Do primeiro papo",
+    "titleAccent": "à entrega.",
+    "description": "Um processo direto, com escopo claro e decisões alinhadas ao que o projeto realmente precisa.",
+    "steps": [
+      {
+        "title": "Entender",
+        "description": "Conversamos sobre o negócio, o público e o que precisa ser resolvido."
+      },
+      {
+        "title": "Planejar",
+        "description": "Definimos escopo, funcionalidades, prazo e investimento."
+      },
+      {
+        "title": "Construir",
+        "description": "Desenvolvo a solução acompanhando os objetivos combinados."
+      },
+      {
+        "title": "Entregar",
+        "description": "Organizamos a publicação, a entrega e possíveis necessidades futuras."
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "06 / CONTATO",
+    "title": "Tem uma ideia?",
+    "titleAccent": "Vamos conversar.",
+    "description": "Me conte o que você precisa construir. A partir daí, podemos entender o projeto e pensar no próximo passo.",
+    "whatsapp": "WhatsApp",
+    "instagram": "Instagram",
+    "signature": "VITOR HUGO FREITAS / DESENVOLVIMENTO DIGITAL"
+  },
+  "footer": {
+    "brandSubtitle": "DESENVOLVIMENTO DIGITAL",
+    "copyright": "Vitor Hugo Freitas",
+    "backToTop": "Voltar ao topo ↑"
+  },
+
+  "projects": {
+  "eyebrow": "PORTFÓLIO",
+  "heading": "Projetos selecionados",
+  "description": "Uma seleção de interfaces, experiências digitais e sistemas web.",
+  "back": "Voltar aos projetos",
+  "openProject": "Abrir projeto {{title}}",
+  "projectLabel": "PROJETO",
+  "landingCategory": "LANDING PAGES",
+  "dashboardCategory": "DASHBOARDS",
+  "systemCategory": "SISTEMAS WEB",
+  "ecommerceCategory": "E-COMMERCE",
+  "orbit": {
+    "title": "Landing Pages",
+    "description": "Coleção de landing pages desenvolvidas com foco em identidade visual, experiência do usuário e design responsivo.",
+    "previewDesign": "Prévia da landing page Design Page",
+    "previewOrbit": "Prévia da landing page Orbit",
+    "previewCount": "02 LANDING PAGES",
+    "items": [
+      {
+        "title": "Orbit",
+        "description": "Landing page com identidade visual marcante, composição moderna e apresentação objetiva do conteúdo."
+      },
+      {
+        "title": "Design Page",
+        "description": "Landing page com foco em apresentação visual, hierarquia de conteúdo e experiência de navegação."
+      }
+    ],
+    "visit": "Visitar projeto",
+    "fullPreview": "Prévia completa da landing page {{title}}"
+  },
+  "nexus": {
+    "title": "Nexus Dashboard",
+    "description": "Dashboard desenvolvido como demonstração prática de construção de interfaces analíticas, visualização de dados e integração com APIs.",
+    "imageAlt": "Prévia do dashboard Nexus",
+    "development": "DESENVOLVIMENTO DE DASHBOARDS",
+    "headline": "Transformando dados em informação visual.",
+    "paragraph1": "Este projeto representa minha capacidade de desenvolver dashboards, estruturar interfaces analíticas e apresentar informações de maneira organizada e intuitiva.",
+    "paragraph2": "O exemplo utiliza um dashboard voltado ao YouTube, integrando dados por meio da API da plataforma para demonstrar como informações de um serviço externo podem ser apresentadas em uma interface própria.",
+    "paragraph3": "O foco está na construção da interface, na visualização dos indicadores e na integração entre a aplicação e a fonte de dados.",
+    "images": [
+      "Visão geral",
+      "Detalhes"
+    ],
+    "imageAltDetail": "{{title}} do dashboard Nexus"
+  },
+  "jaguar": {
+    "title": "Jaguar.AI",
+    "description": "Um workspace inteligente baseado em IA para centralizar conversas, conhecimento e documentos em um único ambiente.",
+    "imageAlt": "Logo do sistema Jaguar.AI",
+    "eyebrow": "WORKSPACE INTELIGENTE BASEADO EM IA",
+    "headline": "Uma camada de inteligência para o trabalho.",
+    "paragraph1": "JAGUAR.AI é um workspace inteligente baseado em IA, desenvolvido para centralizar conversas, conhecimento, documentos e, futuramente, dados organizacionais em um único ambiente.",
+    "paragraph2": "A proposta do Jaguar é evoluir de um assistente conversacional para uma camada de inteligência capaz de interagir com o conhecimento e os sistemas de uma organização.",
+    "paragraph3": "As demonstrações abaixo apresentam diferentes partes da interface e da experiência de uso do projeto.",
+    "demo": "Demonstração {{number}} do Jaguar.AI",
+    "videoFallback": "Seu navegador não suporta a reprodução de vídeo."
+  },
+  "econix": {
+    "title": "Econix",
+    "description": "Conceito de e-commerce com identidade visual contemporânea, experiência de compra intuitiva e interface responsiva.",
+    "status": "EM DESENVOLVIMENTO",
+    "heroEyebrow": "DESIGN CONSCIENTE. VIDA MODERNA.",
+    "heroHeadline": "Escolhas melhores começam aqui.",
+    "heroDescription": "Um conceito de loja online pensado para unir simplicidade, estilo e praticidade.",
+    "cta": "EXPLORAR COLEÇÃO ↗",
+    "products": [
+      "Essenciais",
+      "Casa & rotina",
+      "Novidades"
+    ],
+    "concept": "CONCEITO DE E-COMMERCE",
+    "headline": "Uma experiência de compra mais simples.",
+    "developmentNote": "Este projeto está em desenvolvimento. A prévia apresenta a direção visual conceitual da experiência.",
+    "cardCategory": "E-COMMERCE · UI/UX"
+  }
+},
+
+
+"socialMedia": {
+  "eyebrow": "PORTFÓLIO CRIATIVO",
+  "title": "Design que",
+  "titleAccent": "conecta.",
+  "description": "Uma seleção de peças para redes sociais, com atenção à composição, à identidade visual e à comunicação de cada marca.",
+  "previous": "Mostrar arte anterior",
+  "next": "Mostrar próxima arte",
+  "selectArtwork": "Selecionar arte",
+  "imageAlt": "Arte para redes sociais {{number}}",
+  "showArtwork": "Mostrar arte {{number}}",
+  "fullPortfolio": "Ver portfólio completo"
+}
+
+}

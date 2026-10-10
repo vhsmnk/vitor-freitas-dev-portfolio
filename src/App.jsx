@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+
 import CodeAtmosphere from "./components/CodeAtmosphere.jsx";
 import Navbar from "./components/Navbar.jsx";
 import HeroVisual from "./components/HeroVisual.jsx";
@@ -6,13 +8,15 @@ import ScrollReveal from "./components/ScrollReveal.jsx";
 import Projects from "./components/Projects.jsx";
 import SocialMedia from "./socialmedia/SocialMedia.jsx";
 
-const heroTitleLines = [
-  "Ideias bem pensadas.",
-  "Soluções digitais",
-  "bem construídas.",
-];
-
 function TypingTitle() {
+  const { t, i18n } = useTranslation();
+
+  const heroTitleLines = [
+    t("hero.titleLine1"),
+    t("hero.titleLine2"),
+    t("hero.titleLine3"),
+  ];
+
   const [typedCount, setTypedCount] = useState(0);
 
   const totalCharacters = heroTitleLines.reduce(
@@ -21,6 +25,8 @@ function TypingTitle() {
   );
 
   useEffect(() => {
+    setTypedCount(0);
+
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       setTypedCount(totalCharacters);
       return;
@@ -48,7 +54,7 @@ function TypingTitle() {
         window.clearInterval(typingTimer);
       }
     };
-  }, [totalCharacters]);
+  }, [totalCharacters, i18n.resolvedLanguage]);
 
   const getVisibleText = (lineIndex) => {
     const previousCharacters = heroTitleLines
@@ -67,7 +73,10 @@ function TypingTitle() {
   };
 
   return (
-    <h1 className="hero-title" aria-label={heroTitleLines.join(" ")}>
+    <h1
+      className="hero-title"
+      aria-label={heroTitleLines.join(" ")}
+    >
       <span aria-hidden="true">{getVisibleText(0)}</span>
 
       <br aria-hidden="true" />
@@ -105,6 +114,16 @@ function ServiceItem({ number, icon, title, children }) {
 }
 
 function App() {
+  const { t } = useTranslation();
+
+  const services = t("services.items", {
+    returnObjects: true,
+  });
+
+  const steps = t("process.steps", {
+    returnObjects: true,
+  });
+
   return (
     <>
       <CodeAtmosphere />
@@ -120,24 +139,22 @@ function App() {
         <section className="hero section-shell" id="inicio">
           <div className="hero-content">
             <p className="eyebrow">
-              DESENVOLVIMENTO WEB · DESIGN DIGITAL
+              {t("hero.eyebrow")}
             </p>
 
             <TypingTitle />
 
             <p className="hero-description">
-              Desenvolvo experiências digitais que unem tecnologia,
-              funcionalidade e cuidado visual — de landing pages a sistemas
-              web.
+              {t("hero.description")}
             </p>
 
             <div className="hero-actions">
               <a className="button button-primary" href="#projetos">
-                Explorar projetos <span>↗</span>
+                {t("hero.projectsButton")} <span>↗</span>
               </a>
 
               <a className="text-link" href="#contato">
-                Vamos conversar <span>↗</span>
+                {t("hero.contactButton")} <span>↗</span>
               </a>
             </div>
           </div>
@@ -154,64 +171,46 @@ function App() {
         <section className="services section-shell" id="servicos">
           <div className="section-heading">
             <div>
-              <p className="eyebrow">03 / COMO POSSO AJUDAR</p>
+              <p className="eyebrow">
+                {t("services.eyebrow")}
+              </p>
 
               <h2>
-                O que podemos <span>construir?</span>
+                {t("services.title")}{" "}
+                <span>{t("services.titleAccent")}</span>
               </h2>
             </div>
 
-            <p>
-              Soluções pensadas de acordo com o objetivo, o contexto e as
-              necessidades de cada projeto.
-            </p>
+            <p>{t("services.description")}</p>
           </div>
 
           <div className="service-list">
-            <ServiceItem
-              number="01"
-              icon="↗"
-              title="Sites & landing pages"
-            >
-              Páginas de apresentação, sites institucionais e páginas
-              comerciais para apresentar sua marca e facilitar o contato com
-              seus clientes.
-            </ServiceItem>
-
-            <ServiceItem
-              number="02"
-              icon="⌘"
-              title="Sistemas & aplicações web"
-            >
-              Interfaces administrativas, dashboards e ferramentas internas
-              para organizar fluxos de trabalho e informações.
-            </ServiceItem>
-
-            <ServiceItem
-              number="03"
-              icon="✳"
-              title="Design digital"
-            >
-              Identidade visual e peças para redes sociais que ajudam marcas
-              a comunicar com mais consistência e personalidade.
-            </ServiceItem>
+            {services.map((service, index) => (
+              <ServiceItem
+                key={service.title}
+                number={String(index + 1).padStart(2, "0")}
+                icon={["↗", "⌘", "✳"][index]}
+                title={service.title}
+              >
+                {service.description}
+              </ServiceItem>
+            ))}
           </div>
         </section>
 
         {/* 04 — DESIGN & COMUNICAÇÃO VISUAL */}
         <section className="design-section section-shell" id="design">
           <div className="design-copy">
-            <p className="eyebrow">04 / DESIGN & COMUNICAÇÃO VISUAL</p>
+            <p className="eyebrow">
+              {t("design.eyebrow")}
+            </p>
 
             <h2>
-              Desenvolvimento com <span>sensibilidade visual.</span>
+              {t("design.title")}{" "}
+              <span>{t("design.titleAccent")}</span>
             </h2>
 
-            <p>
-              Além do código, trago experiência com design gráfico e
-              comunicação visual. Explore uma seleção de peças para redes
-              sociais que valorizam composição, identidade e comunicação.
-            </p>
+            <p>{t("design.description")}</p>
 
             <a
               className="text-link"
@@ -219,7 +218,7 @@ function App() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Conheça meu portfólio <span>↗</span>
+              {t("design.button")} <span>↗</span>
             </a>
           </div>
 
@@ -230,55 +229,28 @@ function App() {
         <section className="process section-shell" id="processo">
           <div className="section-heading">
             <div>
-              <p className="eyebrow">05 / PROCESSO</p>
+              <p className="eyebrow">
+                {t("process.eyebrow")}
+              </p>
 
               <h2>
-                Do primeiro papo
+                {t("process.title")}
                 <br />
-                <span>à entrega.</span>
+                <span>{t("process.titleAccent")}</span>
               </h2>
             </div>
 
-            <p>
-              Um processo direto, com escopo claro e decisões alinhadas ao que
-              o projeto realmente precisa.
-            </p>
+            <p>{t("process.description")}</p>
           </div>
 
           <div className="process-grid">
-            <article>
-              <span>01</span>
-              <h3>Entender</h3>
-              <p>
-                Conversamos sobre o negócio, o público e o que precisa ser
-                resolvido.
-              </p>
-            </article>
-
-            <article>
-              <span>02</span>
-              <h3>Planejar</h3>
-              <p>
-                Definimos escopo, funcionalidades, prazo e investimento.
-              </p>
-            </article>
-
-            <article>
-              <span>03</span>
-              <h3>Construir</h3>
-              <p>
-                Desenvolvo a solução acompanhando os objetivos combinados.
-              </p>
-            </article>
-
-            <article>
-              <span>04</span>
-              <h3>Entregar</h3>
-              <p>
-                Organizamos a publicação, a entrega e possíveis necessidades
-                futuras.
-              </p>
-            </article>
+            {steps.map((step, index) => (
+              <article key={step.title}>
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <h3>{step.title}</h3>
+                <p>{step.description}</p>
+              </article>
+            ))}
           </div>
         </section>
 
@@ -287,17 +259,18 @@ function App() {
           <div className="contact-panel">
             <div className="contact-orb" />
 
-            <p className="eyebrow">06 / CONTATO</p>
+            <p className="eyebrow">
+              {t("contact.eyebrow")}
+            </p>
 
             <h2>
-              Tem uma ideia?
+              {t("contact.title")}
               <br />
-              <span>Vamos conversar.</span>
+              <span>{t("contact.titleAccent")}</span>
             </h2>
 
             <p className="contact-description">
-              Me conte o que você precisa construir. A partir daí, podemos
-              entender o projeto e pensar no próximo passo.
+              {t("contact.description")}
             </p>
 
             <div className="contact-actions">
@@ -311,7 +284,7 @@ function App() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                WhatsApp <span>↗</span>
+                {t("contact.whatsapp")} <span>↗</span>
               </a>
 
               <a
@@ -320,12 +293,12 @@ function App() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Instagram <span>↗</span>
+                {t("contact.instagram")} <span>↗</span>
               </a>
             </div>
 
             <span className="contact-signature">
-              VITOR HUGO FREITAS / DESENVOLVIMENTO DIGITAL
+              {t("contact.signature")}
             </span>
           </div>
         </section>
@@ -341,15 +314,15 @@ function App() {
           <span className="brand-name">
             VITOR FREITAS
             <br />
-            <small>DESENVOLVIMENTO DIGITAL</small>
+            <small>{t("footer.brandSubtitle")}</small>
           </span>
         </a>
 
         <span>
-          © {new Date().getFullYear()} Vitor Hugo Freitas
+          © {new Date().getFullYear()} {t("footer.copyright")}
         </span>
 
-        <a href="#inicio">Voltar ao topo ↑</a>
+        <a href="#inicio">{t("footer.backToTop")}</a>
       </footer>
     </>
   );

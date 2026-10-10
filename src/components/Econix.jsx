@@ -1,63 +1,73 @@
+
 import "./econix.css";
+import { useTranslation } from "react-i18next";
 
 export default function Econix({ onClick, onKeyDown }) {
-return ( <article
-   className="econix-card projects-grid-card"
-   role="button"
-   tabIndex={0}
-   onClick={onClick}
-   onKeyDown={onKeyDown}
-   aria-label="Abrir projeto Econix"
- > <div className="econix-card__preview"> <div className="econix-card__topbar"> <span className="econix-card__brand">econix.</span> <span className="econix-card__menu" aria-hidden="true">
-☰ </span> </div>
+  const { t } = useTranslation();
 
-    <div className="econix-card__content">
-      <span className="econix-card__eyebrow">
-        NOVA EXPERIÊNCIA DE COMPRA
-      </span>
+  return (
+    <article
+      className="econix-card projects-grid-card"
+      role="button"
+      tabIndex={0}
+      onClick={onClick}
+      onKeyDown={onKeyDown}
+      aria-label={t("projects.openProject", {
+        title: t("projects.econix.title"),
+      })}
+    >
+      <div className="econix-card__preview">
+        <div className="econix-card__topbar">
+          <span className="econix-card__brand">econix.</span>
+          <span className="econix-card__menu" aria-hidden="true">
+            ☰
+          </span>
+        </div>
 
-      <h2>
-        Seu estilo.
-        <br />
-        Suas escolhas.
-      </h2>
+        {/* Prévia ilustrativa: permanece em português */}
+        <div className="econix-card__content">
+          <span className="econix-card__eyebrow">
+            NOVA EXPERIÊNCIA DE COMPRA
+          </span>
 
-      <p>
-        Uma nova forma de descobrir produtos para o seu dia a dia.
-      </p>
+          <h2>
+            Seu estilo.
+            <br />
+            Suas escolhas.
+          </h2>
 
-      <span className="econix-card__button">
-        EXPLORAR COLEÇÃO ↗
-      </span>
-    </div>
+          <p>
+            Uma nova forma de descobrir produtos para o seu dia a dia.
+          </p>
 
-    <div className="econix-card__decoration" aria-hidden="true">
-      E
-    </div>
+          <span className="econix-card__button">
+            EXPLORAR COLEÇÃO ↗
+          </span>
+        </div>
 
-    <span className="econix-card__status">
-      EM DESENVOLVIMENTO
-    </span>
-  </div>
+        <div className="econix-card__decoration" aria-hidden="true">
+          E
+        </div>
 
-  <div className="econix-card__info">
-    <div>
-      <span className="econix-card__category">
-        E-COMMERCE · UI/UX
-      </span>
+        <span className="econix-card__status">
+          EM DESENVOLVIMENTO
+        </span>
+      </div>
 
-      <h3>Econix</h3>
+      {/* Área explicativa: traduzida pelo i18next */}
+      <div className="econix-card__info">
+        <div>
+          <span className="econix-card__category">
+            {t("projects.econix.cardCategory")}
+          </span>
 
-      <p>
-        Conceito de loja virtual com identidade visual própria,
-        navegação intuitiva e experiência de compra moderna.
-      </p>
-    </div>
+          <h3>{t("projects.econix.title")}</h3>
 
-    <span className="econix-card__number">04</span>
-  </div>
-</article>
+          <p>{t("projects.econix.description")}</p>
+        </div>
 
-
-);
+        <span className="econix-card__number">04</span>
+      </div>
+    </article>
+  );
 }

@@ -1,5 +1,6 @@
 
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import "./SocialMedia.css";
 
 import sm1 from "./sm1.jpg";
@@ -8,10 +9,10 @@ import sm3 from "./sm3.jpg";
 import sm4 from "./sm4.jpg";
 
 const portfolioImages = [
-  { id: "sm-1", src: sm1, alt: "Arte para redes sociais 1" },
-  { id: "sm-2", src: sm2, alt: "Arte para redes sociais 2" },
-  { id: "sm-3", src: sm3, alt: "Arte para redes sociais 3" },
-  { id: "sm-4", src: sm4, alt: "Arte para redes sociais 4" },
+  { id: "sm-1", src: sm1 },
+  { id: "sm-2", src: sm2 },
+  { id: "sm-3", src: sm3 },
+  { id: "sm-4", src: sm4 },
 ];
 
 const portfolioUrl = "https://vitorfreitaspresentate.carrd.co/";
@@ -19,13 +20,15 @@ const portfolioUrl = "https://vitorfreitaspresentate.carrd.co/";
 export default function SocialMedia() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState("next");
+  const { t } = useTranslation();
 
   const currentImage = portfolioImages[currentIndex];
 
   function previousImage() {
     setDirection("prev");
     setCurrentIndex(
-      (index) => (index - 1 + portfolioImages.length) % portfolioImages.length
+      (index) =>
+        (index - 1 + portfolioImages.length) % portfolioImages.length
     );
   }
 
@@ -45,16 +48,16 @@ export default function SocialMedia() {
     <div className="sm-portfolio">
       <div className="sm-portfolio-heading">
         <div>
-          <span className="eyebrow">PORTFÓLIO CRIATIVO</span>
+          <span className="eyebrow">
+            {t("socialMedia.eyebrow")}
+          </span>
 
           <h3>
-            Design que <span>conecta.</span>
+            {t("socialMedia.title")}{" "}
+            <span>{t("socialMedia.titleAccent")}</span>
           </h3>
 
-          <p>
-            Uma seleção de peças para redes sociais, com atenção à
-            composição, à identidade visual e à comunicação de cada marca.
-          </p>
+          <p>{t("socialMedia.description")}</p>
         </div>
 
         <span className="sm-portfolio-counter" aria-live="polite">
@@ -68,7 +71,7 @@ export default function SocialMedia() {
           type="button"
           className="sm-portfolio-arrow"
           onClick={previousImage}
-          aria-label="Mostrar arte anterior"
+          aria-label={t("socialMedia.previous")}
         >
           ←
         </button>
@@ -78,7 +81,9 @@ export default function SocialMedia() {
             key={currentImage.id}
             className={`sm-portfolio-image slide-${direction}`}
             src={currentImage.src}
-            alt={currentImage.alt}
+            alt={t("socialMedia.imageAlt", {
+              number: currentIndex + 1,
+            })}
           />
         </div>
 
@@ -86,13 +91,17 @@ export default function SocialMedia() {
           type="button"
           className="sm-portfolio-arrow"
           onClick={nextImage}
-          aria-label="Mostrar próxima arte"
+          aria-label={t("socialMedia.next")}
         >
           →
         </button>
       </div>
 
-      <div className="sm-portfolio-dots" aria-label="Selecionar arte">
+      <div
+        className="sm-portfolio-dots"
+        role="group"
+        aria-label={t("socialMedia.selectArtwork")}
+      >
         {portfolioImages.map((image, index) => (
           <button
             key={image.id}
@@ -101,7 +110,9 @@ export default function SocialMedia() {
               index === currentIndex ? "is-active" : ""
             }`}
             onClick={() => selectImage(index)}
-            aria-label={`Mostrar arte ${index + 1}`}
+            aria-label={t("socialMedia.showArtwork", {
+              number: index + 1,
+            })}
             aria-pressed={index === currentIndex}
           />
         ))}
@@ -113,7 +124,8 @@ export default function SocialMedia() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        Ver portfólio completo <span aria-hidden="true">↗</span>
+        {t("socialMedia.fullPortfolio")}{" "}
+        <span aria-hidden="true">↗</span>
       </a>
     </div>
   );

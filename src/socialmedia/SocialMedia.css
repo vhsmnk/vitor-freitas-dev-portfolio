@@ -1,4 +1,3 @@
-
 .sm-portfolio {
   width: 100%;
   min-width: 0;
@@ -17,11 +16,16 @@
   margin-bottom: 28px;
 }
 
+.sm-portfolio-heading > div {
+  min-width: 0;
+}
+
 .sm-portfolio-heading h3 {
   margin: 12px 0;
   font-size: clamp(24px, 3vw, 36px);
   line-height: 1.15;
   letter-spacing: -0.04em;
+  overflow-wrap: anywhere;
 }
 
 .sm-portfolio-heading h3 span {
@@ -216,6 +220,16 @@
 
   .sm-portfolio-frame {
     height: min(105vw, 420px);
+  }
+}
+
+@media (max-width: 400px) {
+  .sm-portfolio-heading {
+    flex-wrap: wrap;
+  }
+
+  .sm-portfolio-counter {
+    margin-left: auto;
   }
 }
 
